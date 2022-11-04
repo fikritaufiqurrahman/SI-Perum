@@ -1,0 +1,615 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inika';
+}
+
+.nav img {
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.login {
+    margin-bottom: 100px;
+    margin: auto;
+    width: 586px;
+    height: 561px;
+}
+
+.login h1 {
+    color: #38B6FF;
+    width: 487px;
+    height: 111px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 83px;
+    margin: auto;
+}
+
+.login input,
+.login button {
+    width: 581px;
+    height: 87px;
+    background: #F5F5F5;
+    border-radius: 60px;
+    margin: 10px 0px;
+    text-align: center;
+    border: none;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.login input:placeholder-shown {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.login input[type=email]:focus,
+.login input[type=password]:focus {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    color: rgba(0, 0, 0);
+}
+
+.login a {
+    text-decoration: none;
+    margin-right: 10px;
+    float: right;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.login .bg-blue {
+    background-color: #38B6FF;
+}
+
+.login .bg-blue a {
+    margin-right: 40%;
+    text-decoration: none;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.forgot {
+    margin: auto;
+    width: 700px;
+    height: 50px;
+}
+
+.forgot h3 {
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.forgot form p {
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 45px;
+    color: rgba(0, 0, 0, 0.44);
+}
+
+.forgot input[type=email] {
+    position: absolute;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    width: 400px;
+    height: 40px;
+}
+
+.forgot input[type=submit] {
+    position: absolute;
+    left: 425px;
+    top: 280px;
+    background: #4490FF;
+    border-radius: 8px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.forgot input[type=button] {
+    position: absolute;
+    left: 520px;
+    top: 280px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)), rgba(0, 0, 0, 0.39);
+    border-radius: 8px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+.new p {
+    position: absolute;
+    width: 1100px;
+    height: 50px;
+    left: 150px;
+    top: 140px;
+    background: #C0ECA0;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 45px;
+    text-align: center;
+    color: #000000;
+}
+
+.reset {
+    margin: auto;
+    width: 700px;
+    height: 50px;
+}
+
+.reset h3 {
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.reset p {
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 45px;
+    color: rgba(0, 0, 0, 0.44);
+}
+
+.reset .new,
+.reset .nw {
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    width: 350px;
+    height: 40px;
+}
+
+.reset .submit {
+    width: 280px;
+    height: 60px;
+    position: absolute;
+    left: 333px;
+    top: 360px;
+    background: #4490FF;
+    border-radius: 60px;
+    border: none;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.wrapper .sidebar {
+    background: #4490FF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar ul li a {
+    display: block;
+    padding: 13px 30px;
+    font-size: 16px;
+    position: relative;
+    font-style: 'Lao Sans Pro';
+    color: #FFFFFF;
+}
+
+.wrapper .sidebar ul li a:hover {
+    background: rgba(125, 178, 255, 0.53);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper .section {
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar {
+    background: #FFFFFF;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.wrapper .section .top_navbar .hamburger .ham {
+    margin-left: 10px;
+    margin-top: 100px;
+}
+
+.wrapper .icon {
+    float: right;
+    margin-top: 50px;
+    margin-right: 30px;
+    font-size: 28px;
+}
+
+
+/* .wrapper .icon a:hover {
+    color: #a2ecff;
+} */
+
+.fa-user,
+.fa-comment-dots {
+    margin-right: 15px;
+    color: #4490FF;
+}
+
+.wrapper .section .top_navbar .hamburger .ham a {
+    font-size: 28px;
+    color: #4490FF;
+}
+
+.wrapper .section .top_navbar .hamburger .ham a:hover {
+    color: #a2ecff;
+}
+
+.wrapper .section .top_navbar .hamburger .img img {
+    width: 200px;
+    margin-top: -210px;
+    margin-left: 50px;
+}
+
+body.active .wrapper .sidebar {
+    left: -225px;
+}
+
+body.active .wrapper .section {
+    margin-left: 0;
+    width: 100%;
+}
+
+.data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+}
+
+.data input[type=gambar] {
+    width: 300px;
+    height: 330px;
+    border: 2px solid #4490FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.data input[type=deskripsi] {
+    margin-top: 10px;
+    width: 300px;
+    height: 60px;
+    border: 2px solid #4490FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.data input:placeholder-shown {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 44px;
+    text-align: center;
+    color: #4490FF;
+}
+
+.data .post {
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 70px;
+    background: #4490FF;
+    border-radius: 60px;
+    border: none;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.profil,
+.daftar,
+.succes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+}
+
+.profil .input input[type=text] {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background: #D9D9D9;
+    border: 1px solid #4490FF;
+    text-align: center;
+    border-radius: 80em;
+    align-items: center;
+    margin-left: 120px;
+}
+
+.profil .foto .pilih {
+    width: 90px;
+    height: 38px;
+    background: #4490FF;
+    border-radius: 60px;
+    border: none;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 125px;
+    color: #FFFFFF;
+}
+
+.profil p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #4490FF
+}
+
+.profil .name,
+.profil .nik,
+.profil .no,
+.profil .ea {
+    box-sizing: border-box;
+    background: #F5F5F5;
+    border-radius: 60px;
+    width: 355px;
+    height: 40px;
+    border: none;
+}
+
+.profil .enter .up {
+    width: 100px;
+    height: 38px;
+    margin-top: 15px;
+    float: right;
+    border: none;
+    background: #4490FF;
+    border-radius: 60px;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.daftar p,
+.succes p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 15px;
+    line-height: 20px;
+    color: #4490FF
+}
+
+.daftar .name,
+.daftar .nik,
+.daftar .kk,
+.daftar .no,
+.daftar .ea,
+.daftar .nr,
+.daftar .ya {
+    box-sizing: border-box;
+    background: #F5F5F5;
+    border-radius: 60px;
+    width: 350px;
+    height: 38px;
+    border: none;
+}
+
+.daftar .enter .up {
+    width: 100px;
+    height: 38px;
+    margin-top: 15px;
+    float: right;
+    border: none;
+    background: #4490FF;
+    border-radius: 60px;
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.succes .user,
+.succes .pw {
+    box-sizing: border-box;
+    background: #F5F5F5;
+    border-radius: 60px;
+    width: 350px;
+    height: 38px;
+    border: none;
+}
+
+.succes h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4490FF;
+}
+
+.succes .fa-check-circle {
+    color: #4490FF;
+    font-size: 120px;
+    margin-left: 110px;
+}
+
+.search {
+    margin: auto;
+    margin-top: 75px;
+    width: 700px;
+    height: 50px;
+}
+
+.search h3 {
+    font-family: 'Lao Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    color: #4490FF;
+}
+
+.search input:placeholder-shown {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.search input[type=text]:focus {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.search input {
+    width: 320px;
+    height: 52px;
+    background: #F5F5F5;
+    border-radius: 60px;
+    margin: 10px 0px;
+    border: none;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.search a {
+    margin-left: -40px;
+    font-size: 18px;
+    color: #4490FF;
+}
+
+table {
+    width: 320px;
+    height: 52px;
+    border: 1px solid #F5F5F5;
+    border-collapse: collapse;
+    margin-top: 60px;
+    margin-left: 330px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+table tr {
+    background: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+    margin-right: 1000px;
+}
+
+table th {
+    font-size: 15px;
+    letter-spacing: .1em;
+    color: #4490FF;
+}
