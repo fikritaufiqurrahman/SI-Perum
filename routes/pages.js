@@ -21,4 +21,11 @@ router.get("/login", (req, res) => {
 })
 router.get("/logout", logout)
 
+router.get("/room-chat", (req, res) => {
+    res.render("landing-chat")
+})
+router.get("/chat", (req, res) => {
+    res.render("chat")
+})
+
 module.exports = router;
