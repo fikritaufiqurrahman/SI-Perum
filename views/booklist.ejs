@@ -1,0 +1,64 @@
+<%- include('inc/header.ejs') -%>
+    <%- include('inc/navbar.ejs') -%>
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Data Buku</h1>
+            </div>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Tabel Data Buku</h6>
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-primary" href="<%= url %>buku/add">tambah</a>
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Kartu Keluarga</th>
+                                    <th>NIK/KTP</th>
+                                    <th>Nama Lengkap</th>
+                                    <th>No Rumah</th>
+                                    <th>No Telepon</th>
+                                    <th>Email</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <% data.forEach(item => { %>
+                                    <tr>
+                                        <td>
+                                            <%= item.judul_buku %>
+                                        </td>
+                                        <td>
+                                            <%= item.nama_kategori %>
+                                        </td>
+                                        <td>
+                                            <%= item.pengarang %>
+                                        </td>
+                                        <td>
+                                            <%= item.jumlah %>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="<%= url %>buku/edit/<%= item.id_buku %>">
+                                                <i class="fas fa-solid fa-pen"></i>
+                                            </a>
+                                            <a href="<%= url %>buku/delete/<%= item.id_buku %>">
+                                                <i class="fas fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- /.container-fluid -->
+            <%- include('inc/footer.ejs') -%>

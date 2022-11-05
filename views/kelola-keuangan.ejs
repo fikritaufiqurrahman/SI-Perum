@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="icon">
+            <a href="#">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-comment-dots"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-sign-out-alt" style="color:#4490FF"></i>
+            </a>
+        </div>
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <div class="ham">
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="img">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="img/admin.png">
+            </div>
+            <ul>
+                <li>
+                    <a href="update-profil.html" class="active">
+                        <span class="item">Update Profil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="registrasi.html">
+                        <span class="item">Registrasi Penduduk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="search.html">
+                        <span class="item">Cari Penduduk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="item">Kelola Keuangan</span>
+                    </a>
+                <li>
+                    <a href="pemakaian-air.html">
+                        <span class="item">Input Pemakaian Air</span>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="item">Kelola Pengumuman</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pembayaran">
+            <p>Kelola Keuangan Penduduk</p>
+
+            <table class="col md-1">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">No Rumah</th>
+                        <th scope="col">Air</th>
+                        <th scope="col">Kebersihan</th>
+                        <th scope="col">Keamanan</th>
+                        <th scope="col">Total Bayar</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Keterangan</th>
+                    </tr>
+                    <tr>
+                        <td data-label="No"></td>
+                        <td data-label="Tanggal"></td>
+                        <td data-label="No Rumah"></td>
+                        <td data-label="Air"></td>
+                        <td data-label="Kebersihan"></td>
+                        <td data-label="Keamanan"></td>
+                        <td data-label="Total Bayar"></td>
+                        <td data-label="Status"></td>
+                        <td data-label="Keterangan"></td>
+                    </tr>
+                </thead>
+            </table>
+
+            <div class="up-date">
+                <a href="update-status.html"><input class="baru" type="button" value="Update Status"></a>
+                <a href="konf-bayar.html"><input class="konf" type="button" value="Konfirmasi Pembayaran"></a>
+        </div>
+
+    </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function() {
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+</body>
+
+</html>

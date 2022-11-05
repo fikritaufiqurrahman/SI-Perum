@@ -3,11 +3,15 @@ const db = require("./routes/db-config");
 const cookie = require("cookie-parser");
 const dotenv = require("dotenv").config();
 const path = require("path");
+const session = require("express-session");
 const http = require("http");
 const socketio = require("socket.io");
+const bodyParser = require("body-parser");
+const flash = require("req-flash");
 const formatMessage = require("./utils/messages");
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require("./utils/users")
 const app = express();
+
 
 const PORT = process.env.PORT || 3000;
 const server = http.createServer(app);
@@ -65,11 +69,15 @@ io.on("connection", socket => {
 
 });
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'publics/assets')))
+app.use(express.static(path.join(__dirname, 'node_modules')))
 
-app.use(express.static('public'))
-app.use("/js", express.static(__dirname + "public/js"))
-app.use("/css", express.static(__dirname + "public/css"))
 
+
+const bukuRoute = require("./routes/route-buku");
+app.use("/buku", bukuRoute);
 
 
 
