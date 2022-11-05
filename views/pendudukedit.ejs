@@ -2,7 +2,7 @@
     <%- include('inc/navbar.ejs') -%>
         <div class="container">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Data Buku</h1>
+                <h1 class="h3 mb-0 text-gray-800">Data Penduduk</h1>
             </div>
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
@@ -11,32 +11,32 @@
                         <div class="col-lg-12">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Form Edit Buku</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Form Edit Data Penduduk</h1>
                                 </div>
-                                <form class="user" method="post" action="<%= url %>buku/edit">
+                                <form class="user" method="post" action="<%= url %>penduduk/edit">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="text" name="judul" class="form-control form-control-user" placeholder="Masukkan Judul Buku" value="<%= judul %>" required>
+                                            <input type="text" name="nama" class="form-control form-control-user" placeholder="Masukkan Nama Lengkap" value="<%= nama %>" required>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" name="penerbit" class="form-control form-control-user" id="exampleLastName" placeholder="Masukkan Nama Penerbit" value="<%= penerbit %>" required>
+                                            <input type="text" name="nik" class="form-control form-control-user" id="exampleLastName" placeholder="Masukkan NIK/KTP" value="<%= nik %>" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="number" name="tahun" class="form-control form-control-user" placeholder="Masukkan Tahun Terbit" value="<%= tahun %>" required>
+                                            <input type="text" name="nokk" class="form-control form-control-user" placeholder="Masukkan Nomor Kartu Keluarga" value="<%= nokk %>" required>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" name="pengarang" class="form-control form-control-user" id="exampleLastName" placeholder="Masukkan Nama Pengarang" value="<%= pengarang %>" required>
+                                            <input type="text" name="email" class="form-control form-control-user" id="exampleLastName" placeholder="Masukkan E-mail" value="<%= email %>" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="number" name="denda" class="form-control form-control-user" placeholder="Masukan Jumlah Denda" value="<%= denda %>" required>
+                                            <input type="number" name="hnumber" class="form-control form-control-user" placeholder="Masukan Nomor Rumah" value="<%= hnumber %>" required>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="number" class="form-control form-control-user" name="jumlah" placeholder="Masukan Jumlah Buku" value="<%= jumlah %>" required>
-                                            <input type="hidden" value="<%= id_buku %>" name="id_buku">
+                                            <input type="text" class="form-control form-control-user" name="telp" placeholder="Masukan Nomor Telepon" value="<%= telp %>" required>
+                                            <input type="hidden" value="<%= id %>" name="id">
                                         </div>
                                     </div>
                                     <div class="form-group row">

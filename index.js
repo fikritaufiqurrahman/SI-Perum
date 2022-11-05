@@ -76,8 +76,8 @@ app.use(express.static(path.join(__dirname, 'node_modules')))
 
 
 
-const bukuRoute = require("./routes/route-buku");
-app.use("/buku", bukuRoute);
+const pendudukRoute = require("./routes/route-penduduk");
+app.use("/penduduk", pendudukRoute);
 
 
 

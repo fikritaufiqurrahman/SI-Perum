@@ -7,13 +7,11 @@ pool.on("error", (err) => {
 });
 
 module.exports = {
-    // Ambil data semua buku
-    getAllData(req, res) {
+    // Ambil data semua penduduk
+    getAllBooks(req, res) {
         pool.getConnection(function(err, connection) {
             if (err) throw err;
-            let query = `SELECT * FROM t_buku 
-        INNER JOIN t_kategori ON t_buku.id_kategori = t_kategori.id_kategori
-        INNER JOIN t_jenis ON t_buku.id_jenis = t_jenis.id_jenis;`;
+            let query = `SELECT * FROM registrasi;`;
             connection.query(query, function(error, results) {
                 if (error) throw error;
                 res.render("booklist", {
@@ -25,21 +23,21 @@ module.exports = {
             connection.release();
         });
     },
-    // Ambil data buku berdasarkan ID
-    getDataById(req, res) {
+    // Ambil data penduduk berdasarkan ID
+    getBookById(req, res) {
         let id = req.params.id;
         pool.getConnection(function(err, connection) {
             if (err) throw err;
             connection.query(
                 `
-                SELECT * FROM t_buku WHERE id_buku = ?;
+                SELECT * FROM registrasi WHERE id = ?;
                 `, [id],
                 function(error, results) {
                     if (error) throw error;
                     res.render("booklist", {
                         data: results,
                         url: "http://localhost:5000/",
-                        userName: req.session.username,
+                        userName: "fikri",
                     });
                 }
             );
@@ -47,7 +45,7 @@ module.exports = {
         });
     },
     // Form add book
-    formAddData(req, res) {
+    formAddBook(req, res) {
         pool.getConnection(function(err, connection) {
             if (err) throw err;
             let query = `SELECT * FROM t_kategori`;
@@ -55,7 +53,7 @@ module.exports = {
             connection.query(query, function(error, results) {
                 if (error) throw error;
                 // console.log({data: results});
-                res.render("tambahbuku", {
+                res.render("tambahpenduduk", {
                     data: results,
                     url: "http://localhost:5000/",
                     userName: "fikri",
@@ -64,27 +62,26 @@ module.exports = {
             connection.release();
         });
     },
-    // Simpan data buku\buku\add
-    addData(req, res) {
+    // Simpan data penduduk\penduduk\add
+    addBook(req, res) {
         let data = {
-            judul_buku: req.body.judul,
-            penerbit: req.body.penerbit,
-            tahun: req.body.tahun,
-            denda: req.body.denda,
-            pengarang: req.body.pengarang,
-            jumlah: req.body.jumlah,
-            id_jenis: req.body.id_jenis,
-            id_kategori: req.body.id_kategori,
+            name: req.body.nama,
+            nik: req.body.nik,
+            nokk: req.body.nokk,
+            telp: req.body.telp,
+            email: req.body.email,
+            hnumber: req.body.hnumber,
+            headfamily: req.body.id_jenis,
         };
         pool.getConnection(function(err, connection) {
             if (err) throw err;
             connection.query(
                 `
-                INSERT INTO t_buku SET ?;
+                INSERT INTO registrasi SET ?;
                 `, [data],
                 function(error, results) {
                     if (error) throw error;
-                    res.redirect("/buku");
+                    res.redirect("/penduduk");
                 }
             );
             connection.release();
@@ -95,19 +92,18 @@ module.exports = {
         let id = req.params.id
         pool.getConnection(function(err, connection) {
             if (err) throw err;
-            let query = `select * from t_buku INNER JOIN t_kategori ON t_buku.id_kategori = t_kategori.id_kategori
-      INNER JOIN t_jenis ON t_buku.id_jenis = t_jenis.id_jenis where id_buku = ${id}`
+            let query = `select * from registrasi where id = ${id}`
             connection.query(query, function(error, results) {
                 if (error) throw error;
                 // console.log({data: results});
-                res.render("bukuedit", {
-                    id_buku: results[0].id_buku,
-                    judul: results[0].judul_buku,
-                    penerbit: results[0].penerbit,
-                    tahun: results[0].tahun,
-                    pengarang: results[0].pengarang,
-                    denda: results[0].denda,
-                    jumlah: results[0].jumlah,
+                res.render("pendudukedit", {
+                    id: results[0].id,
+                    nama: results[0].name,
+                    nik: results[0].nik,
+                    nokk: results[0].nokk,
+                    email: results[0].email,
+                    hnumber: results[0].hnumber,
+                    telp: results[0].telp,
                     url: "http://localhost:5000/",
                     userName: "fikri",
                 });
@@ -115,45 +111,44 @@ module.exports = {
             connection.release();
         });
     },
-    // Update data Buku
-    editData(req, res) {
+    // Update data penduduk
+    editBook(req, res) {
         let dataEdit = {
-            judul_buku: req.body.judul,
-            penerbit: req.body.penerbit,
-            tahun: req.body.tahun,
-            denda: req.body.denda,
-            pengarang: req.body.pengarang,
-            jumlah: req.body.jumlah,
-            id_jenis: req.body.jenis,
-            id_kategori: req.body.kategori,
+            name: req.body.nama,
+            nik: req.body.nik,
+            nokk: req.body.nokk,
+            email: req.body.email,
+            telp: req.body.telp,
+            hnumber: req.body.hnumber,
+            headfamily: req.body.id,
         };
-        let id_buku = req.body.id_buku;
+        let id = req.body.id;
         pool.getConnection(function(err, connection) {
             if (err) throw err;
             connection.query(
                 `
-                UPDATE t_buku SET ? WHERE id_buku = ?;
-                `, [dataEdit, id_buku],
+                UPDATE registrasi SET ? WHERE id = ?;
+                `, [dataEdit, id],
                 function(error, results) {
                     if (error) throw error;
-                    res.redirect('/buku')
+                    res.redirect('/penduduk')
                 }
             );
             connection.release();
         });
     },
-    // Delete data buku
-    deleteData(req, res) {
+    // Delete data penduduk
+    deleteBook(req, res) {
         let id = req.params.id;
         pool.getConnection(function(err, connection) {
             if (err) throw err;
             connection.query(
                 `
-                DELETE FROM t_buku WHERE id_buku = ?;
+                DELETE FROM registrasi WHERE id = ?;
                 `, [id],
                 function(error, results) {
                     if (error) throw error;
-                    res.redirect('/')
+                    res.redirect('/penduduk')
                 }
             );
             connection.release();

@@ -10,47 +10,53 @@
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Tabel Data Buku</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Tabel Data Penduduk</h6>
                 </div>
                 <div class="card-body">
-                    <a class="btn btn-primary" href="<%= url %>buku/add">tambah</a>
+                    <a class="btn btn-primary" href="<%= url %>penduduk/add">tambah</a>
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Kartu Keluarga</th>
                                     <th>NIK/KTP</th>
+                                    <th>No. Kartu Keluarga</th>
                                     <th>Nama Lengkap</th>
-                                    <th>No Rumah</th>
-                                    <th>No Telepon</th>
                                     <th>Email</th>
+                                    <th>Kontak</th>
+
                                     <th>Action</th>
                                 </tr>
                             </thead>
 
+                            </tfoot>
                             <tbody>
                                 <% data.forEach(item => { %>
                                     <tr>
                                         <td>
-                                            <%= item.judul_buku %>
+                                            <%= item.nik %>
                                         </td>
                                         <td>
-                                            <%= item.nama_kategori %>
+                                            <%= item.nokk %>
                                         </td>
                                         <td>
-                                            <%= item.pengarang %>
+                                            <%= item.name %>
                                         </td>
                                         <td>
-                                            <%= item.jumlah %>
+                                            <%= item.email %>
                                         </td>
+                                        <td>
+                                            <%= item.telp %>
+                                        </td>
+
                                         <td class="text-center">
-                                            <a href="<%= url %>buku/edit/<%= item.id_buku %>">
+                                            <a href="<%= url %>penduduk/edit/<%= item.id %>">
                                                 <i class="fas fa-solid fa-pen"></i>
                                             </a>
-                                            <a href="<%= url %>buku/delete/<%= item.id_buku %>">
+                                            <a href="<%= url %>penduduk/delete/<%= item.id %>">
                                                 <i class="fas fa-solid fa-trash"></i>
                                             </a>
                                         </td>
+
                                     </tr>
                                     <% }) %>
                             </tbody>

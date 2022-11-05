@@ -1,6 +1,6 @@
-const data = require("./controller-data");
-
+const penduduk = require("./controller-penduduk");
 
 module.exports = {
-    data,
+    penduduk,
+
 };
